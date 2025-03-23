@@ -1,0 +1,194 @@
+<!Doctype Html>
+<html>
+    <head>
+        <title>21 days</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial scale=1.0">
+        <link rel="stylesheet" href="artistictimes.css">
+        <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+        <link rel="icon" type="image/x-icon" href="favicon (1).ico">
+        <style>
+            * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 6px;
+  
+  
+  
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+article{
+    background-color: white;
+    padding:8px;
+    margin-top: -33px;
+    position:sticky;
+}
+section{
+    
+    margin-top:-30 px;
+    padding:10px;
+    width:75%;
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+    background-color: rgb(222, 246, 252);;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  border-radius:5px;
+  font-family:'Annie use your telescope';
+  font-size:15px;
+  font-weight:800;
+  margin-top:auto;
+  margin-bottom:auto;
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
+
+
+}
+#intro{
+    font-family:'Annie use your telescope';
+  font-size:40px;
+  font-weight:800;
+}
+a:hover{
+    opacity:0.6;
+}
+.container{}
+#demo{
+  font-family:'annie use your telescope';
+  text-align:Center;
+  font-weight:800;
+  color:#29d2e4;
+  font-size:25px;
+}
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="heading">
+                
+            
+                <img src="Artistic.png" style="float:center;background-color:white;" class="headimg"> </div>
+                
+    
+            </div>
+    
+        </header>
+      <nav>
+        <div class="navbar">
+            <a href="artistic times.html">Home</a>&nbsp;&nbsp;
+            <a href="journal.html">Art</a>&nbsp;&nbsp;
+            <a href="">Journal</a>&nbsp;&nbsp;
+            <a href="">Wellness</a>&nbsp;&nbsp;
+    
+    </nav><br><br>
+    
+    <article>
+        <p id="intro" style="text-align: center;"> <button type="button"  class="button"onclick="typeWriter();myfunc();" style="text-align:center">your name</button></p>
+        <p id="demo"></p>
+        <script>
+           
+            function myfunc(){
+                var text;
+                let person=prompt("Please Enter your name:");
+                text= "Hello  "+person + "!";
+                document.getElementById("intro").innerHTML=text;}
+                var i = 0;
+var txt = 'Take up any Challenge and build the New you.. within 21 days!';
+var speed = 70;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+                
+                    
+                
+            
+        </script>
+    </article>
+    <section>
+        <div class="row">
+            <div class="column">
+              <a href="prompt.html"><img src="happiness.png" alt="Snow" style="width:100%"></a>
+             
+            </div>
+            <div class="column">
+                <a href=""><img src="welln.png" alt="Snow" style="width:100%"></a>
+             
+              
+            </div>
+            <div class="column">
+                <a href=""><img src="productivity.png" alt="Snow" style="width:100%"></a>
+             
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="column">
+              <a href=""><img src="junkfood.png" alt="Snow" style="width:100%"></a>
+             
+            </div>
+            <div class="column">
+                <a href=""><img src="socialdetox.png" alt="Snow" style="width:100%"></a>
+             
+              
+            </div>
+            <div class="column">
+                <a href=""><img src="study.png" alt="Snow" style="width:100%"></a>
+             
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="column">
+              <a href=""><img src="journn.png" alt="Snow" style="width:100%"></a>
+             
+            </div>
+            <div class="column">
+                <a href=""><img src="nightroutine.png" alt="Snow" style="width:100%"></a>
+             
+              
+            </div>
+            <div class="column">
+                <a href=""><img src="morningroutine.png" alt="Snow" style="width:100%"></a>
+             
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="column">
+              <a href=""><img src="selflove.png" alt="Snow" style="width:100%"></a>
+             
+            </div>
+            <div class="column">
+                <a href=""><img src="reminder (1).png" alt="Snow" style="width:100%"></a>
+             
+              
+            </div>
+            <div class="column">
+                <a href=""><img src="reminder (2).png" alt="Snow" style="width:100%"></a>
+             
+            </div>
+          </div><br>
+    </section>
+    </div>
+    </body>
+    </html>

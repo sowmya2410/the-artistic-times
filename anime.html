@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('art parallax.png');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Styles for the three-column image layout */
+
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    grid-gap: 40px; /* Adjust the gap between images */
+    max-width: 1000px; /* Adjust the maximum width of the image container */
+    margin-right:auto;
+    margin-left:auto;
+    
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top:25px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Add any additional styling to enhance the design */
+
+</style>
+</head>
+<body>
+
+<div class="parallax"></div>
+
+<div style="height:1000px;background-image:url('download.png');font-size:36px; background-repeat: no-repeat;
+background-size: cover;">
+
+
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="4.png" alt="Image 1">
+        </div>
+        <div class="image-wrapper">
+            <img src="painting2.png" alt="Image 2">
+        </div>
+        <div class="image-wrapper">
+            <img src="painting3.png" alt="Image 3">
+        </div>
+        <!-- Add more image wrappers as needed -->
+    </div>
+
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="painting4.png" alt="Image 1">
+        </div>
+        <div class="image-wrapper">
+            <img src="painting5.png" alt="Image 2">
+        </div>
+        <div class="image-wrapper">
+            <img src="painting6.png" alt="Image 3">
+        </div>
+        <!-- Add more image wrappers as needed -->
+    </div>
+</body>
+</html>
+
+</div>
+
+<div class="parallax"></div>
+
+</body>
+</html>

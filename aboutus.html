@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="favicon (1).ico">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  
+  float:left;
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color:rgb(205, 243, 243);
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+.row{
+width:70%;
+display:block;
+margin-right:auto;
+margin-left:auto;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.headimg{
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top:13px;
+   
+
+
+    
+}
+
+@media only screen and (max-width: 600px) {
+.headimg{width:60%}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+.headimg{width:50%}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+.headimg{width:40%}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+.headimg{width:30%}
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+.headimg{width:25%}
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="heading">
+    <img src="Artistic.png" style="float:center;background-color:white;" class="headimg"> </div>
+    </header>
+<div class="about-section">
+    <h2 style="text-align:center">Our Team</h2>
+</div>
+
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="abt1 (1).jpg" alt="Jane" style="width:80%;display:block;margin-right:auto;margin-left:auto;">
+      <div class="container">
+        <h2>Sowmya</h2>
+        <p class="title">B.tech It</p>
+        <p>College of Engineering Guindy,Anna University</p>
+        <p>2022115021</p>
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="abt1 (2).jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Jayasri</h2>
+        <p class="title">B.Tech-IT</p>
+        <p>College of Engineering Guindy,Anna University</p>
+        <p>2022115040</p>
+       
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+</body>
+</html>

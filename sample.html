@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="favicon (1).ico">
+    <style>
+        /* Styles for the habit tracker */
+
+
+
+
+.headimg{
+            display:block;
+            margin-right: auto;
+            margin-left: auto;
+
+
+            
+        }
+
+        @media only screen and (max-width: 600px) {
+  .headimg{width:60%}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .headimg{width:50%}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .headimg{width:40%}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .headimg{width:30%}
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .headimg{width:25%}
+}
+@media only screen and (max-width: 600px) {
+  .navbar a{font-size: 10px;}
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .navbar a{font-size: 14px;}
+    .navbar{padding-top: 20px;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .navbar a{font-size: 15px;}
+    .navbar{padding-top: 20px;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .navbar a{font-size: 15px;}
+    .navbar{padding-top: 20px;}
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .navbar a{font-size: 15px;}
+}
+.navbar a{
+    text-decoration:none;
+    color:black;
+    text-align:center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size:16px;
+    padding:10px;
+    
+    
+}
+.navbar{
+border-top:0.1px solid rgb(235, 229, 229);
+border-bottom:0.1px solid rgb(235, 229, 229); ;
+text-align:center;
+padding:5px;
+font-family: 'Annie Use Your Telescope';
+font-weight:800;
+
+
+}
+
+.navbar a:hover{
+  color:#77c0fb;;
+}
+
+
+
+/* Styles for the habit tracker */
+
+    
+
+.container {
+    max-width: 800px;
+    margin: 50 ;
+    padding: 20px;
+    background-color:#ecf6fe;
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.habit-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.habit {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.habit h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.day input[type="checkbox"] {
+    display: none;
+}
+
+.day span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+   
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+padding-bottom:8px;
+    
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.day input[type="checkbox"]:checked + span {
+    opacity:0.2;
+}
+body{
+    font-family:'annie use your telescope';
+}
+
+/* Add any additional innovative styling to enhance the design */
+
+.containers {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+/* Styles for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    padding: 30px;
+    background-color: #d6e4ef;
+    border-radius: 8px;
+  overflow:auto;
+  display:block;
+ padding-right:45px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    color: #1d1d1d;
+    cursor: pointer;
+}
+
+#entryDate, #entryContent,#image {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  
+  margin-right:auto;
+  margin-left:auto;
+}
+.journal-entries {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+
+/* Add any additional innovative styling to enhance the design */
+
+.form-details {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+}
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="heading">
+            
+        
+            <img src="Artistic.png" style="float:center;background-color:white;" class="headimg"> </div>
+            
+
+        </div>
+
+    </header>
+  <nav>
+    <div class="navbar">
+        <a href="artistic times.html">Home</a>&nbsp;&nbsp;
+        <a href="journal.html">Art</a>&nbsp;&nbsp;
+        <a href="">Journal</a>&nbsp;&nbsp;
+        <a href="">Wellness</a>&nbsp;&nbsp;
+
+</nav><br><br>
+
+ <div class="container">
+        <h1>Journaling</h1>
+        <div class="habit-list">
+            <div class="habit">
+                <h2>Water  <span style="color:grey;">(8 glasses of water a day)</span></h2>
+                <div class="days">
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="Untitled design (5).png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="Untitled design (5).png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="Untitled design (5).png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="Untitled design (5).png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="Untitled design (5).png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="Untitled design (5).png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="Untitled design (5).png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="Untitled design (5).png"></span>
+                    </label>
+                    <!-- Repeat this label for each day of the week -->
+                </div>
+            </div>
+            
+            <!-- Repeat this habit div for each habit you want to track -->
+        </div>
+
+
+        <br>
+        <div class="habit-list">
+            <div class="habit">
+                <h2>How are you Feeling?  </h2>
+                <div class="days">
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="happy.png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="cool.png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="anger.png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="sad.png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="cry.png"></span>
+                    </label>
+                   
+                    <!-- Repeat this label for each day of the week -->
+                </div>
+            </div>
+            
+            <!-- Repeat this habit div for each habit you want to track -->
+        </div>
+
+
+        <br>
+        <div class="habit-list">
+            <div class="habit">
+                <h2>Weather?  <span style="color:grey;">(Embrace the temperature)</span></h2>
+                <div class="days">
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="sunny.png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="breeze.png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="cloudy.png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="rainy.png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="snow.png"></span>
+                    </label>
+                    
+                    <!-- Repeat this label for each day of the week -->
+                </div>
+            </div>
+            
+            <!-- Repeat this habit div for each habit you want to track -->
+        </div>
+
+
+
+        <br>
+        <div class="habit-list">
+            <div class="habit">
+                <h2>Hobbies  <span style="color:grey;">(Live and Love the moments)</span></h2>
+                <div class="days">
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="relax.png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="games.png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="photos.png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="games (2).png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="music.png"></span>
+                    </label>
+                    <label class="day">
+                        <input type="checkbox" name="exercise" value="monday">
+                        <span><img src="read.png"></span>
+                    </label>
+                   
+                    <!-- Repeat this label for each day of the week -->
+                </div>
+            </div>
+            
+            <!-- Repeat this habit div for each habit you want to track -->
+        </div>
+
+<br>
+        <div class="habit-list">
+           <div class="habit">
+
+
+            <div class="container">
+                <div class="header">
+                    <h1>My Online Journal</h1>
+                    <button id="newEntryButton">New Entry</button>
+                </div>
+                <div class="journal-entries" id="journalEntries">
+                    <!-- Journal entries will be dynamically added here -->
+                </div>
+            </div>
+        
+            <!-- Modal for creating a new journal entry -->
+            <div id="newEntryModal" class="modal">
+                <form id="journalForm" action="">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>New Journal Entry</h2>
+                    <label for="entryDate">Date:</label>
+                    <input type="date" id="entryDate" required>
+                    <label for="entryContent">Journal Entry:</label>
+                    <textarea id="entryContent" rows="8" required></textarea>
+                    
+                    <button  type="button"id="saveEntryButton">Save Entry</button>
+                </form>
+                
+               
+        
+                </div>
+            </div>
+
+            <script>
+
+document.getElementById("newEntryButton").addEventListener("click", function() {
+    document.getElementById("newEntryModal").style.display = "block";
+});
+
+document.getElementsByClassName("close-button")[0].addEventListener("click", function() {
+    document.getElementById("newEntryModal").style.display = "none";
+});
+
+/*document.getElementById("saveEntryButton").addEventListener("click", function() {
+    // Code to save the journal entry to the backend
+    // For demonstration purposes, let's just log the entry for now
+    var entryDate = document.getElementById("entryDate").value;
+    var entryContent = document.getElementById("entryContent").value;
+    console.log("Date: " + entryDate);
+    console.log("Entry: " + entryContent);
+
+    document.getElementById("newEntryModal").style.display = "none";
+});
+// JavaScript for dynamically displaying form entries*/
+
+// JavaScript for displaying journal entries on the same page
+const journalForm = document.getElementById("journalForm");
+const journalEntriesDiv = document.getElementById("journalEntries");
+
+document.getElementById("saveEntryButton").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form values
+    const date = document.getElementById("entryDate").value;
+    const entry = document.getElementById("entryContent").value;
+   
+    // Create a new div to display the journal entry
+    const entryDiv = document.createElement("div");
+    entryDiv.classList.add("entry");
+    entryDiv.innerHTML = `
+        <h3>${date}</h3>
+        <p style="color:black;font-size:25px;font-weight:600;">${entry}</p>
+    `;
+
+    journalEntriesDiv.appendChild(entryDiv);
+    journalForm.reset();
+    document.getElementById("newEntryModal").style.display = "none";
+     // Clear the form after displaying the journal entry
+});
+
+
+
+            </script> 
+
+
+           </div>
+        </div>
+    </div>
+
+
+    
+    
+
+
+</body>
+</html>

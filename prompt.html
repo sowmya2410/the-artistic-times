@@ -1,0 +1,340 @@
+<!Doctype Html>
+<html>
+    <head>
+        <title>Wellness-Featured</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial scale=1.0">
+        <link rel="stylesheet" href="artistictimes.css">
+        <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+        <link rel="icon" type="image/x-icon" href="favicon (1).ico">
+        <style>
+          
+
+           .bg p{
+            text-align:center;
+            font-size:35px;
+            font-family:'annie use your telescope';
+            font-weight:800;
+            
+
+            
+           }
+           *{
+            box-sizing: border-box;
+           }
+.inner{
+    border:1px solid black;
+    
+    float:left;
+    width:19%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+   margin:4.01px;
+    font-family:'annie use your telescope';
+    font-size:30px;
+    font-weight:600;
+    
+    text-align:center;
+    
+}
+.outer::after {
+  content: "";
+  clear: both;
+  display: table;
+  
+}
+.outer{
+  margin:40px;
+  background-color: rgb(222, 246, 252);
+    border-radius:8px;
+ 
+
+}
+section{
+    text-align: center;
+    display: block;
+    margin-right: auto;
+    margin-left:auto;
+    width:60%;
+   
+}
+/* The actual popup */
+.inner .popuptext {
+  visibility:hidden;
+  width: 160px;
+  background-color: rgb(97, 215, 245);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px ;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  font-family:'annie use your telescope';
+}
+.inner .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 2s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+/* Popup container - can be anything you want */
+.inner {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color:white;
+}
+span{
+  font-family:'annie use your telescope';
+  font-weight:600;
+  font-size:20px;
+}
+
+
+
+/* Popup arrow */
+.inner .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+  font-family:'annie use your telescope';
+}
+.outer{
+  padding:10px;
+}
+#sub{
+  color:grey;
+  font-size:18px;
+  font-weight:600;
+  margin-top:-13px;
+}
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="heading">
+                
+            
+                <img src="Artistic.png" style="float:center;background-color:white;" class="headimg"> </div>
+                
+    
+            </div>
+    
+        </header>
+      <nav>
+        <div class="navbar">
+            <a href="artistic times.html">Home</a>&nbsp;&nbsp;
+            <a href="journal.html">Art</a>&nbsp;&nbsp;
+            <a href="">Journal</a>&nbsp;&nbsp;
+            <a href="">Wellness</a>&nbsp;&nbsp;
+    
+    </nav><br><br>
+    <div class="bg">
+<p>Happiness</p>
+<p id="sub">Committing to these simple practices we will all start appreciating life and become happier!</p>
+    </div>
+    <section>
+        
+          <div class="outer" >
+            <div class="inner" onclick="myFunction1()">1
+                <span class="popuptext" id="myPopup1">Listen to your Favourite song!</span>
+
+
+            </div>
+            <div class="inner" onclick="myFunction2()">2
+                <span class="popuptext" id="myPopup2">Spend Less time on your Phone!</span>
+
+            </div>
+            <div class="inner" onclick="myFunction3()">3
+                <span class="popuptext" id="myPopup3">Exercise!</span>
+
+            </div>
+            <div class="inner" onclick="myFunction4()">4
+                <span class="popuptext" id="myPopup4">Cook the dinner!</span>
+
+            </div>
+            <div class="inner" onclick="myFunction5()">5
+                <span class="popuptext" id="myPopup5">Hug someone you like!</span>
+
+            </div>
+          </div>
+        
+        <div class="outer">
+          <div class="inner" onclick="myFunction6()">6
+            <span class="popuptext" id="myPopup6">Watch a funny movie!</span>
+
+          </div>
+          <div class="inner"onclick="myFunction7()">7
+            <span class="popuptext" id="myPopup7">Call a friend!</span>
+
+          </div>
+          <div class="inner" onclick="myFunction8()">8
+            <span class="popuptext" id="myPopup8">Dance like Nobody's Watching!</span>
+
+          </div>
+          <div class="inner" onclick="myFunction9()">9
+            <span class="popuptext" id="myPopup9">Go out into Nature and be an explorer for a day!!</span>
+
+          </div>
+          <div class="inner" onclick="myFunction10()">10
+            <span class="popuptext" id="myPopup10">Buy a gift for someone you love!</span>
+
+          </div>
+        </div>
+        <div class="outer">
+            <div class="inner" onclick="myFunction11()" >11
+                <span class="popuptext" id="myPopup11">go to bed and wakeup early!</span>
+            </div>
+            <div class="inner" onclick="myFunction12()">12
+                <span class="popuptext" id="myPopup12">read Something inspiring!</span>
+            </div>
+            <div class="inner" onclick="myFunction13()">13
+                <span class="popuptext" id="myPopup13">Meditate for 10 min!</span>
+            </div>
+            <div class="inner" onclick="myFunction14()">14
+                <span class="popuptext" id="myPopup14">Try yoga!</span>
+            </div>
+            <div class="inner" onclick="myFunction15()">15
+                <span class="popuptext" id="myPopup15">Plan a future Vacation!</span>
+            </div>
+          </div>
+          <div class="outer">
+            <div class="inner" onclick="myFunction16()" >16
+                <span class="popuptext" id="myPopup16">Try a new recipe !</span>
+            </div>
+            <div class="inner" onclick="myFunction17()">17
+                <span class="popuptext" id="myPopup17">Connect with a old friend!</span>
+            </div>
+            <div class="inner" onclick="myFunction18()">18
+                <span class="popuptext" id="myPopup18">Watch the Sunset!</span>
+            </div>
+            <div class="inner" onclick="myFunction19()">19
+                <span class="popuptext" id="myPopup19">=Tell people how much they mean to you!</span>
+            </div>
+            <div class="inner" onclick="myFunction20()">20
+                <span class="popuptext" id="myPopup20">Try something new!</span>
+            </div>
+          </div>
+          <div class="outer" style="margin-right:686px;">
+            <div class="inner" onclick="myFunction21()" style="padding:76px;"  >21
+  <span class="popuptext" id="myPopup21">=Go for a walk outside!</span>
+            </div>
+            </div>
+    </section>
+    <script>
+        // When the user clicks on div, open the popup
+        function myFunction1() {
+          var popup = document.getElementById("myPopup1");
+          popup.classList.toggle("show");
+        }
+        function myFunction2() {
+          var popup = document.getElementById("myPopup2");
+          popup.classList.toggle("show");
+        }
+        function myFunction3() {
+          var popup = document.getElementById("myPopup3");
+          popup.classList.toggle("show");
+        }
+        function myFunction4() {
+          var popup = document.getElementById("myPopup4");
+          popup.classList.toggle("show");
+        }
+        function myFunction5() {
+          var popup = document.getElementById("myPopup5");
+          popup.classList.toggle("show");
+          
+        }
+        function myFunction6() {
+          var popup = document.getElementById("myPopup6");
+          popup.classList.toggle("show");
+        }
+        function myFunction7() {
+          var popup = document.getElementById("myPopup7");
+          popup.classList.toggle("show");
+        }
+        function myFunction8() {
+          var popup = document.getElementById("myPopup8");
+          popup.classList.toggle("show");
+        }
+        function myFunction9() {
+          var popup = document.getElementById("myPopup9");
+          popup.classList.toggle("show");
+        }
+        function myFunction10() {
+          var popup = document.getElementById("myPopup10");
+          popup.classList.toggle("show");
+        }
+        function myFunction11() {
+          var popup = document.getElementById("myPopup11");
+          popup.classList.toggle("show");
+        }
+        function myFunction12() {
+          var popup = document.getElementById("myPopup12");
+          popup.classList.toggle("show");
+        }
+        function myFunction13() {
+          var popup = document.getElementById("myPopup13");
+          popup.classList.toggle("show");
+        }
+        function myFunction14() {
+          var popup = document.getElementById("myPopup14");
+          popup.classList.toggle("show");
+        }
+        function myFunction15() {
+          var popup = document.getElementById("myPopup15");
+          popup.classList.toggle("show");
+        }
+        function myFunction16() {
+          var popup = document.getElementById("myPopup16");
+          popup.classList.toggle("show");
+        }
+        function myFunction17() {
+          var popup = document.getElementById("myPopup17");
+          popup.classList.toggle("show");
+        }
+        function myFunction18() {
+          var popup = document.getElementById("myPopup18");
+          popup.classList.toggle("show");
+        }
+        function myFunction19() {
+          var popup = document.getElementById("myPopup19");
+          popup.classList.toggle("show");
+        }
+        function myFunction20() {
+          var popup = document.getElementById("myPopup20");
+          popup.classList.toggle("show");
+        }
+        function myFunction21() {
+          var popup = document.getElementById("myPopup21");
+          popup.classList.toggle("show");
+        }
+       
+        </script>
+    </body>
+    </html>
